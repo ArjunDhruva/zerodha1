@@ -23,6 +23,11 @@ app.use(cors());
 app.use(cookieParser());
 
 // app.use("/",SignUp);
+app.get("/", (req, res) => {
+  res.send("Backend API is running!");
+});
+
+
 
 app.get("/allHoldings", async (req, res) => {
   let allHoldings = await HoldingsModel.find({});
