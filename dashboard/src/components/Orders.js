@@ -10,7 +10,7 @@ const Orders = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:3002/newOrder", {
+      .get(`${process.env.REACT_APP_BACKEND_URL}/newOrder`, {
         headers: {
           Authorization: user,
         },

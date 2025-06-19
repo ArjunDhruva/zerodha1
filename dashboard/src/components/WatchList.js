@@ -37,7 +37,7 @@ const data = {
 };
 
   useEffect( ()=>{
-    axios.get("http://localhost:3002/watchlist")
+    axios.get(`${process.env.REACT_APP_BACKEND_URL}/watchlist`)
     .then( (res)=>{
        setWatchlistData(res.data);
     })
